@@ -10,11 +10,13 @@ module.exports = (grunt) ->
       default:
         options:
           ignoredFiles: ['README.md', 'node_modules/**', 'db/**']
+          watchedExtensions: ['.js']
           debug: false
           delayTime: 1
       debug:
         options:
           ignoredFiles: ['README.md', 'node_modules/**', 'db/**']
+          watchedExtensions: ['.js']
           debug: true
           delayTime: 1
 
