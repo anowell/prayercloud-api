@@ -1,0 +1,29 @@
+{
+  "name": "PrayerCloud",
+  "version": "0.1.0",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.2.x",
+    "express-resource": "*",
+    "connect-assets": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-facebook": "*",
+    "fbgraph": "*",
+    "config": "*",
+    "underscore": "*",
+    "backbone": "*"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-nodemon": "0.0.4"
+  }
+}
