@@ -25,8 +25,8 @@ app.configure( function() {
     app.use(express.logger('dev'));
     app.use(express.bodyParser());
     app.use(express.methodOverride());
-    app.use(express.cookieParser('Jesus Christ made Seattle under protest'));
-    app.use(express.session());
+    app.use(express.cookieParser());
+    app.use(express.cookieSession({ secret: 'Jesus Christ made Seattle under protest', key: 'sid'}));
     app.use(passport.initialize());
     app.use(passport.session());    
     app.use(app.router);
