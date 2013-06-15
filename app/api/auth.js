@@ -8,23 +8,22 @@ module.exports = function (app, auth) {
     app.get('/auth/facebook/callback', 
         passport.authenticate('facebook', { 
             successRedirect: '/',
-            failureRedirect: '/login' 
+            failureRedirect: '/?login=failed'
         })
     )
 
-    //app.post('/api/auth', login)
-    app.delete('/api/auth', logout)
+    app.post(  '/api/auth', create)
+    app.delete('/api/auth', destroy)
 
-    // Convenient route aliases
-    //app.get('api/login',   login)
-    app.get('api/logout',   logout)
+    app.post('/api/login', create)
+    app.post('/api/logout', destroy)
 }
 
+var create = function(req, res) { 
+  res.json(400, new Error('TODO: "CREATE AUTH" (login) API NOT YET IMPLEMENTED.'))
+}
 
-var logout = function(req, res){
-  var pcUrl = req.protocol + '://' + req.get('Host') + '/';
-  //var fbLogout = "https://www.facebook.com/logout.php?next=" + pcUrl + "&access_token=" + req.user.accessToken 
+var destroy = function(req, res){
   req.logout();
-  //res.redirect( fbLogout );
-  res.redirect( '/' );
+  res.json(204); // Success - No Content
 }
