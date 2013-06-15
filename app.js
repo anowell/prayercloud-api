@@ -7,12 +7,14 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , passport = require('passport')
-  , config = require('config')
   , mongoose = require('mongoose')
   , auth = require('./app/lib/authentication')
 
+
 var app = express();
-console.log("Initializing " + app.settings.env + " environment")
+console.log("Initializing " + app.get('env') + " environment")
+
+var config = require('./config/' + app.get('env'))
 
 mongoose.connect(config.db.uri)
 auth.initialize(config)

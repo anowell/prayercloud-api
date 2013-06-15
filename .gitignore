@@ -1,5 +1,4 @@
 node_modules/
-config/runtime.json
 .DS_Store
 db/
 public
