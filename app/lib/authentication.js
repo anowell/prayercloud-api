@@ -11,7 +11,8 @@ exports.initialize = function (config) {
             clientID: config.facebook.appId,
             clientSecret: config.facebook.appSecret,
             callbackURL: config.facebook.hostUri+"/auth/facebook/callback"
-        }, function(accessToken, refreshToken, profile, done) {
+        }, 
+		function(accessToken, refreshToken, profile, done) {
             console.log("Received Facebook profile")
             //console.log(profile)
 
@@ -24,11 +25,8 @@ exports.initialize = function (config) {
                         done(null, user)
                     })
                 }
-            })
-
-
-        }
-    ))
+            });
+        }));
 
 
     // Initialize passport to serialize users into the session.
