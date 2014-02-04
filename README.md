@@ -1,6 +1,10 @@
 PrayerCloud-API
 ===============
 
+PrayerCloud was a back-burner project that had to be put aside to focus on some other projects. I hope to return to it someday, but in the meantime I'm parking it here on the chance of finding contributors who might share a similar vision.
+
+PrayerCloud-API is the RESTful mongo-backed JSON API leveraged by [PrayerCloud-Web](https://github.com/anowell/prayercloud-web). Disclaimer: it was my first stab at NodeJS/Mongo, parts of the API aren't complete, and it lacks tests.
+
 
 Getting Started
 ---------------
