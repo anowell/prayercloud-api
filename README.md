@@ -1,4 +1,4 @@
-PrayerCloud-API
+PayerCloud-API
 ===============
 
 PrayerCloud was a back-burner project that had to be put aside to focus on some other projects. I hope to return to it someday, but in the meantime I'm parking it here on the chance of finding contributors who might share a similar vision.
@@ -15,7 +15,7 @@ Getting Started
 
 API now accessible at: `http://localhost:3000/api/`
 
-Detailed [getting started guide](https://bitbucket.org/anowell/prayercloud-api/wiki/Home) available on the wiki.
+Detailed [getting started guide](docs/getting-started.md) available on the wiki.
 
 API
 ---------------
@@ -30,7 +30,7 @@ The PrayerCloud API aims to be RESTful:
     /api/friends    # Friends (I)
     /api/me         # Logged in user (R)
 
-Detailed [API Documentation](https://bitbucket.org/anowell/prayercloud-api/wiki/API) available on the wiki.
+Detailed [API Documentation](docs/api.md) available on the wiki.
 
 Developer Tip
 -------------
